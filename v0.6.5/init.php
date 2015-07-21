@@ -10,12 +10,11 @@ if ( ! defined( 'WPINC' ) ) {
 if( is_admin() ){
 	
 	// Checks that the user is on localhost. Aviary does not work on localhost
-	if( !is_on_localhost() ){
+	is_on_localhost();
 		
-		include_once __DIR__.'/admin/class-buooy-aviary-editor-admin.php';
-		include_once __DIR__.'/admin/class-buooy-aviary-editor.php';
+	include_once __DIR__.'/admin/class-buooy-aviary-editor-admin.php';
+	include_once __DIR__.'/admin/class-buooy-aviary-editor.php';
 		
-	}
 }
 
 // Checks if the user is on localhost
@@ -36,8 +35,8 @@ function is_on_localhost(){
 function aviary_localhost_warning(){
 	
 	$banner = 	'<div id="warning-banner" style="width: 100%; color: white; position:fixed; bottom: 0; z-index:9999; background-color: #c0392b;">';
-	$banner .=		'<p style="padding-left: 20px; padding-right: 20px;">';
-	$banner .=			'Please note that you are on localhost and Aviary requires you to have a hosted server.';
+	$banner .=		'<p style="line-height: 50px; padding-left: 20px; padding-right: 20px;">';
+	$banner .=			'Please note that you are on localhost and Buooy Aviary Editor might not function properly.';
 	$banner .=			'<span style="float:right; font-size: 18px; cursor:pointer;" onclick="document.getElementById(\'warning-banner\').style.display = \'none\'">&times;</span>';
 	$banner .=		'</p>';
 	$banner .=	'</div>';

@@ -32,8 +32,6 @@ Class Buooy_Aviary_Editor{
 			'appkey' => $this->aviary_appkey
 		) );
 		
-		wp_enqueue_style( 'buooy-image-editor', plugins_url( 'assets/css/style_editor.css',__FILE__ ), NULL );
-		
 	}
 	
 	//	========================================

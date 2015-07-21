@@ -12,13 +12,12 @@ Class Buooy_Aviary_Editor_Admin{
 		$this->option_name = 'aviary-appkey';
 		
 		// Adds the necessary wp actions
-		add_action( 'admin_menu', array($this,'submenu_page') );
+		add_action('admin_menu', array($this,'submenu_page') );
 		add_action( 'admin_enqueue_scripts', array( $this, 'style' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'script' ) );
 		add_action( 'wp_ajax_save_appkey', array( $this, 'save_appkey' ) );
 		
-		// adds filters to the plugin page
-		add_filter( 'plugin_action_links', array($this, 'plugin_action_links'),10, 5 );
+		add_filter( 'plugin_action_links', array($this,'plugin_action_links'), 10, 5 );
 		
 	}
 	
@@ -27,6 +26,7 @@ Class Buooy_Aviary_Editor_Admin{
 		
 		if( $hook == 'settings_page_aviary_settings' ){
 			
+			wp_enqueue_script( 'semantic-ui' , '//oss.maxcdn.com/semantic-ui/2.0.4/semantic.min.js', array('jquery'), '2.0.4' );
 			wp_enqueue_script( $this->script_handle , $this->plugin_dir.'js/script-settings.min.js', array('jquery'), $this->version );
 			
 			// Creates a nonce and localizes the nonce to the above script
@@ -40,6 +40,7 @@ Class Buooy_Aviary_Editor_Admin{
 	
 	// Adds styling
 	public function style( $hook ){
+		wp_enqueue_style( 'semantic-ui', "//oss.maxcdn.com/semantic-ui/2.0.4/semantic.min.css", false, '2.0.4' );
 		wp_enqueue_style( $this->style_handle, $this->plugin_dir.'css/style.css', false, $this->version );
 	}
 	
@@ -75,12 +76,13 @@ Class Buooy_Aviary_Editor_Admin{
 		
 	}
 	
-	// Adds the plugin action links
-	public function plugin_action_links($actions, $plugin_file ){
-		if( $plugin_file == 'buooy-aviary-editor/buooy-aviary-editor.php' ){
-			$actions[] = '<a href="'. esc_url( get_admin_url(null, 'options-general.php?page=aviary_settings') ) .'">Settings</a>';
-		}
-		return $actions;
+	// Plugin Action link
+	public function plugin_action_links( $links, $plugin_file ){
+		if( $plugin_file != 'buooy-aviary-editor/buooy-aviary-editor.php' ){ return; }
+		$mylinks = array(
+			'<a href="' . admin_url( 'options-general.php?page=aviary_settings' ) . '">Settings</a>',
+		);
+		return array_merge( $links, $mylinks );
 	}
 	
 }
