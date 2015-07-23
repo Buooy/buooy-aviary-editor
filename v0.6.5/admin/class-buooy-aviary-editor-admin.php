@@ -26,7 +26,7 @@ Class Buooy_Aviary_Editor_Admin{
 		
 		if( $hook == 'settings_page_aviary_settings' ){
 			
-			wp_enqueue_script( 'semantic-ui' , '//oss.maxcdn.com/semantic-ui/2.0.4/semantic.min.js', array('jquery'), '2.0.4' );
+			//wp_enqueue_script( 'semantic-ui' , '//oss.maxcdn.com/semantic-ui/2.0.4/semantic.min.js', array('jquery'), '2.0.6' );
 			wp_enqueue_script( $this->script_handle , $this->plugin_dir.'js/script-settings.min.js', array('jquery'), $this->version );
 			
 			// Creates a nonce and localizes the nonce to the above script
@@ -40,7 +40,7 @@ Class Buooy_Aviary_Editor_Admin{
 	
 	// Adds styling
 	public function style( $hook ){
-		wp_enqueue_style( 'semantic-ui', "//oss.maxcdn.com/semantic-ui/2.0.4/semantic.min.css", false, '2.0.4' );
+		wp_enqueue_style( 'semantic-ui', plugins_url("assets/css/semantic.min.css",__FILE__), false, '2.0.6' );
 		wp_enqueue_style( $this->style_handle, $this->plugin_dir.'css/style.css', false, $this->version );
 	}
 	
