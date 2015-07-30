@@ -1,11 +1,11 @@
 <?php
 /**
- * Plugin Name:       Buooy Aviary Editor
- * Plugin URI:        http://buooy.com
- * Description:       Buooy Aviary Editor allows you to use the powerful Aviary editor to crop, edit and manage your images.
- * Version:           0.6.6
- * Author:            Aaron Lee
- * Author URI:        http://buooy.com
+Plugin Name:     Buooy Aviary Editor
+Plugin URI:      http://buooy.com
+Description:		Buooy Aviary Editor allows you to use the powerful Aviary editor to crop, edit and manage your images.
+Version:	0.6.6
+Author:          Aaron Lee
+Author URI:      http://buooy.com
  */
 
 // If this file is called directly, abort.
