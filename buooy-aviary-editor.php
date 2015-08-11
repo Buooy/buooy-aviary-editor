@@ -3,7 +3,7 @@
 Plugin Name:     Buooy Aviary Editor
 Plugin URI:      http://buooy.com
 Description:		Buooy Aviary Editor allows you to use the powerful Aviary editor to crop, edit and manage your images.
-Version:	0.6.8
+Version:	0.6.9
 Author:          Aaron Lee
 Author URI:      http://buooy.com
  */
@@ -15,7 +15,7 @@ if ( ! defined( 'WPINC' ) ) {
 
 // Gets the version number
 if(!defined('BUOOY_AVIARY_EDITOR_VERSION')){
-	define('BUOOY_AVIARY_EDITOR_VERSION', 'v0.6.8');
+	define('BUOOY_AVIARY_EDITOR_VERSION', 'v0.6.9');
 }
 // Gets the modal type
 if(!defined('BUOOY_AVIARY_EDITOR_MODAL')){

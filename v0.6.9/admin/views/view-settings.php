@@ -31,7 +31,16 @@
 				
 			</div>
 			
-			<div class="column center aligned ">
+			<div class="column center aligned">
+				<h3>Need Support? Find Us On Stewaard</h3>
+				<a href="http://buooy.stewaard.com/?utm_source=plugins&utm_medium=wordpress&utm_campaign=buooy%20aviary%20editor" target="_blank">
+					<img style="width: 225px;" class="ui centered image rounded" src="<?php echo plugins_url('assets/img', __DIR__); ?>/stewaard.v.0.5.0.png">
+				</a>
+				<br>
+				<p style="width:50%; min-width: 200px; margin: 0 auto;">Stewaard is a hosted integrated platform that allows you to build a support subscription business in minutes.</p>
+				
+				<br>
+				
 				<h3>Built with love by</h3>
 				<a href="http://buooy.com/?utm_source=plugins&utm_medium=wordpress&utm_campaign=buooy%20aviary%20editor">
 					<img style="width: 225px;" class="ui centered image rounded" src="<?php echo plugins_url('assets/img', __DIR__); ?>/buooy-rectangle.png">

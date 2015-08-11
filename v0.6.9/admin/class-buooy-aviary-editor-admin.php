@@ -1,4 +1,5 @@
 <?php 
+include_once __DIR__.'/lib/class-buooy-aviary-editor-ajax.php';
 Class Buooy_Aviary_Editor_Admin{
 	
 	public function __construct(){
